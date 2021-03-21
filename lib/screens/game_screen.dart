@@ -32,45 +32,84 @@ class _GameScreenState extends State<GameScreen> {
                 width: 30,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  tictactoe[0] = true;
+                  setState(() {});
+                },
                 child: Container(
                   height: 120,
                   width: 120,
                   decoration: BoxDecoration(
-                    color: Colors.orange,
+                    color: Colors.white,
                     border: Border.all(
                       width: 1,
                     ),
                   ),
-                  child: Center(
-                    child: Text('Game Screen'),
-                  ),
+                  child: tictactoe[0]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[1] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[1]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[2] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[2]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
             ],
@@ -80,43 +119,85 @@ class _GameScreenState extends State<GameScreen> {
               SizedBox(
                 width: 30,
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[3] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[3]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[4] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[4]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[5] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[5]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
             ],
@@ -126,43 +207,85 @@ class _GameScreenState extends State<GameScreen> {
               SizedBox(
                 width: 30,
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[6] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[6]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[7] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[7]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
-              Container(
-                height: 120,
-                width: 120,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                  border: Border.all(
-                    width: 1,
+              InkWell(
+                onTap: () {
+                  tictactoe[8] = true;
+                  setState(() {});
+                },
+                child: Container(
+                  height: 120,
+                  width: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      width: 1,
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text('Game Screen'),
+                  child: tictactoe[8]
+                      ? Center(
+                          child: Text(
+                            'X',
+                            style:
+                                TextStyle(fontSize: 108, color: Colors.black),
+                          ),
+                        )
+                      : Center(
+                          child: Text(''),
+                        ),
                 ),
               ),
             ],
