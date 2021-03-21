@@ -121,6 +121,32 @@ class _ChooseScreenState extends State<ChooseScreen> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 60,
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/game');
+              },
+              child: Container(
+                height: 40,
+                width: 160,
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange,
+                  borderRadius: BorderRadius.circular(32.0),
+                ),
+                child: Center(
+                  child: Text(
+                    'Start',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
