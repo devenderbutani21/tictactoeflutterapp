@@ -18,6 +18,28 @@ class _GameScreenState extends State<GameScreen> {
     false,
   ];
 
+  int i = 0;
+
+  Widget xoDisplay(bool tic) {
+    return tic
+        ? (i % 2 == 0
+            ? Center(
+                child: Text(
+                  'X',
+                  style: TextStyle(fontSize: 108, color: Colors.black),
+                ),
+              )
+            : Center(
+                child: Text(
+                  'O',
+                  style: TextStyle(fontSize: 108, color: Colors.black),
+                ),
+              ))
+        : Center(
+            child: Text(''),
+          );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,61 +56,45 @@ class _GameScreenState extends State<GameScreen> {
               InkWell(
                 onTap: () {
                   tictactoe[0] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      width: 1,
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        width: 1,
+                      ),
                     ),
-                  ),
-                  child: tictactoe[0]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
-                ),
+                    child: xoDisplay(tictactoe[0])),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[1] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
-                  height: 120,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      width: 1,
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(
+                        width: 1,
+                      ),
                     ),
-                  ),
-                  child: tictactoe[1]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
-                ),
+                    child: xoDisplay(tictactoe[1])),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[2] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -99,17 +105,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[2]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[2]),
                 ),
               ),
             ],
@@ -122,7 +118,9 @@ class _GameScreenState extends State<GameScreen> {
               InkWell(
                 onTap: () {
                   tictactoe[3] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -133,23 +131,15 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[3]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[3]),
                 ),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[4] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -160,23 +150,15 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[4]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[4]),
                 ),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[5] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -187,17 +169,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[5]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[5]),
                 ),
               ),
             ],
@@ -210,7 +182,9 @@ class _GameScreenState extends State<GameScreen> {
               InkWell(
                 onTap: () {
                   tictactoe[6] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -221,23 +195,15 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[6]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[6]),
                 ),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[7] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -248,23 +214,15 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[7]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[7]),
                 ),
               ),
               InkWell(
                 onTap: () {
                   tictactoe[8] = true;
-                  setState(() {});
+                  setState(() {
+                    i++;
+                  });
                 },
                 child: Container(
                   height: 120,
@@ -275,17 +233,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: tictactoe[8]
-                      ? Center(
-                          child: Text(
-                            'X',
-                            style:
-                                TextStyle(fontSize: 108, color: Colors.black),
-                          ),
-                        )
-                      : Center(
-                          child: Text(''),
-                        ),
+                  child: xoDisplay(tictactoe[8]),
                 ),
               ),
             ],
