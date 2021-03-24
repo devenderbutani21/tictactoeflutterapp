@@ -18,26 +18,53 @@ class _GameScreenState extends State<GameScreen> {
     false,
   ];
 
+  List<String> type = [
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+    '',
+  ];
+
   int i = 0;
 
-  Widget xoDisplay(bool tic) {
-    return tic
-        ? (i % 2 == 0
-            ? Center(
-                child: Text(
-                  'X',
-                  style: TextStyle(fontSize: 108, color: Colors.black),
-                ),
-              )
-            : Center(
-                child: Text(
-                  'O',
-                  style: TextStyle(fontSize: 108, color: Colors.black),
-                ),
-              ))
-        : Center(
-            child: Text(''),
-          );
+  Widget xoDisplay(String s) {
+    if (s == "x") {
+      return Center(
+        child: Text(
+          'X',
+          style: TextStyle(fontSize: 108, color: Colors.black),
+        ),
+      );
+    } else if (s == "o") {
+      return Center(
+        child: Text(
+          'O',
+          style: TextStyle(fontSize: 108, color: Colors.black),
+        ),
+      );
+    } else {
+      return Center(
+        child: Text(''),
+      );
+    }
+  }
+
+  Widget checkLock(bool lock) {
+    if (lock == false) {
+      lock = true;
+      if (i % 2 == 0) {
+        xoDisplay('x');
+      } else {
+        xoDisplay('o');
+      }
+    } else {
+      xoDisplay('');
+    }
   }
 
   @override
@@ -55,9 +82,17 @@ class _GameScreenState extends State<GameScreen> {
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[0] == false) {
+                    if (i % 2 == 0) {
+                      type[0] = 'x';
+                    } else {
+                      type[0] = 'o';
+                    }
+                  }
                   tictactoe[0] = true;
                   setState(() {
                     i++;
+                    print(i);
                   });
                 },
                 child: Container(
@@ -69,10 +104,17 @@ class _GameScreenState extends State<GameScreen> {
                         width: 1,
                       ),
                     ),
-                    child: xoDisplay(tictactoe[0])),
+                    child: xoDisplay(type[0])),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[1] == false) {
+                    if (i % 2 == 0) {
+                      type[1] = 'x';
+                    } else {
+                      type[1] = 'o';
+                    }
+                  }
                   tictactoe[1] = true;
                   setState(() {
                     i++;
@@ -87,10 +129,17 @@ class _GameScreenState extends State<GameScreen> {
                         width: 1,
                       ),
                     ),
-                    child: xoDisplay(tictactoe[1])),
+                    child: xoDisplay(type[1])),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[2] == false) {
+                    if (i % 2 == 0) {
+                      type[2] = 'x';
+                    } else {
+                      type[2] = 'o';
+                    }
+                  }
                   tictactoe[2] = true;
                   setState(() {
                     i++;
@@ -105,7 +154,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[2]),
+                  child: xoDisplay(type[2]),
                 ),
               ),
             ],
@@ -117,6 +166,13 @@ class _GameScreenState extends State<GameScreen> {
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[3] == false) {
+                    if (i % 2 == 0) {
+                      type[3] = 'x';
+                    } else {
+                      type[3] = 'o';
+                    }
+                  }
                   tictactoe[3] = true;
                   setState(() {
                     i++;
@@ -131,11 +187,18 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[3]),
+                  child: xoDisplay(type[3]),
                 ),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[4] == false) {
+                    if (i % 2 == 0) {
+                      type[4] = 'x';
+                    } else {
+                      type[4] = 'o';
+                    }
+                  }
                   tictactoe[4] = true;
                   setState(() {
                     i++;
@@ -150,11 +213,18 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[4]),
+                  child: xoDisplay(type[4]),
                 ),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[5] == false) {
+                    if (i % 2 == 0) {
+                      type[5] = 'x';
+                    } else {
+                      type[5] = 'o';
+                    }
+                  }
                   tictactoe[5] = true;
                   setState(() {
                     i++;
@@ -169,7 +239,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[5]),
+                  child: xoDisplay(type[5]),
                 ),
               ),
             ],
@@ -181,6 +251,13 @@ class _GameScreenState extends State<GameScreen> {
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[6] == false) {
+                    if (i % 2 == 0) {
+                      type[6] = 'x';
+                    } else {
+                      type[6] = 'o';
+                    }
+                  }
                   tictactoe[6] = true;
                   setState(() {
                     i++;
@@ -195,11 +272,18 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[6]),
+                  child: xoDisplay(type[6]),
                 ),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[7] == false) {
+                    if (i % 2 == 0) {
+                      type[7] = 'x';
+                    } else {
+                      type[7] = 'o';
+                    }
+                  }
                   tictactoe[7] = true;
                   setState(() {
                     i++;
@@ -214,11 +298,18 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[7]),
+                  child: xoDisplay(type[7]),
                 ),
               ),
               InkWell(
                 onTap: () {
+                  if (tictactoe[8] == false) {
+                    if (i % 2 == 0) {
+                      type[8] = 'x';
+                    } else {
+                      type[8] = 'o';
+                    }
+                  }
                   tictactoe[8] = true;
                   setState(() {
                     i++;
@@ -233,7 +324,7 @@ class _GameScreenState extends State<GameScreen> {
                       width: 1,
                     ),
                   ),
-                  child: xoDisplay(tictactoe[8]),
+                  child: xoDisplay(type[8]),
                 ),
               ),
             ],
