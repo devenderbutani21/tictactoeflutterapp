@@ -40,7 +40,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.white,
+        color: Colors.black,
         height: double.maxFinite,
         width: double.maxFinite,
         child: Column(
@@ -52,15 +52,14 @@ class _ChooseScreenState extends State<ChooseScreen> {
               child: Text(
                 'Choose your side',
                 style: TextStyle(
-                  fontSize: 42,
+                  fontSize: 48,
                   fontWeight: FontWeight.bold,
                   foreground: Paint()..shader = linearGradient,
-
                 ),
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Row(
               children: [
@@ -91,35 +90,41 @@ class _ChooseScreenState extends State<ChooseScreen> {
             SizedBox(
               height: 20,
             ),
-            Row(
-              children: [
-                SizedBox(
-                  width: 90,
-                ),
-                Radio(
-                  value: true,
-                  groupValue: XOrO,
-                  onChanged: (T) {
-                    print(T);
-                    setState(() {
-                      XOrO = T;
-                    });
-                  },
-                ),
-                SizedBox(
-                  width: 140,
-                ),
-                Radio(
-                  value: false,
-                  groupValue: XOrO,
-                  onChanged: (T) {
-                    print(T);
-                    setState(() {
-                      XOrO = T;
-                    });
-                  },
-                ),
-              ],
+            Theme(
+              data: ThemeData(
+                unselectedWidgetColor: Colors.white,
+                primarySwatch: Colors.orange,
+              ),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 90,
+                  ),
+                  Radio(
+                    value: true,
+                    groupValue: XOrO,
+                    onChanged: (T) {
+                      print(T);
+                      setState(() {
+                        XOrO = T;
+                      });
+                    },
+                  ),
+                  SizedBox(
+                    width: 140,
+                  ),
+                  Radio(
+                    value: false,
+                    groupValue: XOrO,
+                    onChanged: (T) {
+                      print(T);
+                      setState(() {
+                        XOrO = T;
+                      });
+                    },
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               height: 60,
@@ -129,8 +134,8 @@ class _ChooseScreenState extends State<ChooseScreen> {
                 Navigator.pushNamed(context, '/game');
               },
               child: Container(
-                height: 40,
-                width: 160,
+                height: 48,
+                width: 180,
                 decoration: BoxDecoration(
                   color: Colors.deepOrange,
                   borderRadius: BorderRadius.circular(32.0),

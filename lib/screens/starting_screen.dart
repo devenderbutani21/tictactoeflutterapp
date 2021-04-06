@@ -36,22 +36,22 @@ class _StartingScreenState extends State<StartingScreen> {
               child: Text(
                 'TicTacToe',
                 style: TextStyle(
-                  fontSize: 54,
+                  fontSize: 64,
                   fontWeight: FontWeight.bold,
                   foreground: Paint()..shader = linearGradient,
                 ),
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 60,
             ),
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, '/choose');
               },
               child: Container(
-                height: 40,
-                width: 160,
+                height: 48,
+                width: 180,
                 decoration: BoxDecoration(
                   color: Colors.deepOrange,
                   borderRadius: BorderRadius.circular(32.0),
@@ -68,32 +68,6 @@ class _StartingScreenState extends State<StartingScreen> {
                 ),
               ),
             ),
-            // SizedBox(
-            //   height: 40,
-            // ),
-            // InkWell(
-            //   onTap: () {
-            //     Navigator.pushNamed(context, '/score');
-            //   },
-            //   child: Container(
-            //     height: 40,
-            //     width: 160,
-            //     decoration: BoxDecoration(
-            //       color: Colors.deepOrange,
-            //       borderRadius: BorderRadius.circular(32.0),
-            //     ),
-            //     child: Center(
-            //       child: Text(
-            //         'Score',
-            //         style: TextStyle(
-            //           fontSize: 28,
-            //           fontWeight: FontWeight.bold,
-            //           color: Colors.white,
-            //         ),
-            //       ),
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),
