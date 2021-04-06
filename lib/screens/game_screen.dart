@@ -32,6 +32,29 @@ class _GameScreenState extends State<GameScreen> {
 
   int i = 0;
 
+  bool checker() {
+    if ((type[0] == 'o' && type[1] == 'o' && type[2] == 'o') ||
+        (type[3] == 'o' && type[4] == 'o' && type[5] == 'o') ||
+        (type[6] == 'o' && type[7] == 'o' && type[8] == 'o') ||
+        (type[0] == 'o' && type[3] == 'o' && type[6] == 'o') ||
+        (type[1] == 'o' && type[4] == 'o' && type[7] == 'o') ||
+        (type[2] == 'o' && type[5] == 'o' && type[8] == 'o') ||
+        (type[0] == 'o' && type[4] == 'o' && type[8] == 'o') ||
+        (type[2] == 'o' && type[4] == 'o' && type[6] == 'o') ||
+        (type[0] == 'x' && type[1] == 'x' && type[2] == 'x') ||
+        (type[3] == 'x' && type[4] == 'x' && type[5] == 'x') ||
+        (type[6] == 'x' && type[7] == 'x' && type[8] == 'x') ||
+        (type[0] == 'x' && type[3] == 'x' && type[6] == 'x') ||
+        (type[1] == 'x' && type[4] == 'x' && type[7] == 'x') ||
+        (type[2] == 'x' && type[5] == 'x' && type[8] == 'x') ||
+        (type[0] == 'x' && type[4] == 'x' && type[8] == 'x') ||
+        (type[2] == 'x' && type[4] == 'x' && type[6] == 'x')) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   Widget xoDisplay(String s) {
     if (s == "x") {
       return Center(
@@ -99,6 +122,7 @@ class _GameScreenState extends State<GameScreen> {
                       tictactoe[0] = true;
                       setState(() {
                         i++;
+                        checker();
                       });
                     },
                     child: Container(
@@ -125,6 +149,7 @@ class _GameScreenState extends State<GameScreen> {
                       tictactoe[1] = true;
                       setState(() {
                         i++;
+                        checker();
                       });
                     },
                     child: Container(
@@ -151,6 +176,7 @@ class _GameScreenState extends State<GameScreen> {
                       tictactoe[2] = true;
                       setState(() {
                         i++;
+                        checker();
                       });
                     },
                     child: Container(
@@ -186,6 +212,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[3] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
@@ -213,6 +240,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[4] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
@@ -240,6 +268,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[5] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
@@ -274,6 +303,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[6] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
@@ -301,6 +331,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[7] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
@@ -328,6 +359,7 @@ class _GameScreenState extends State<GameScreen> {
                     tictactoe[8] = true;
                     setState(() {
                       i++;
+                      checker();
                     });
                   },
                   child: Container(
