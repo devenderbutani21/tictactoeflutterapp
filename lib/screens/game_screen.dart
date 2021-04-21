@@ -6,6 +6,34 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
+  final Shader linearGradient1 = LinearGradient(
+    colors: <Color>[
+      Colors.blue,
+      Colors.lightBlue,
+    ],
+  ).createShader(
+    Rect.fromLTWH(
+      0.0,
+      0.0,
+      200.0,
+      70.0,
+    ),
+  );
+
+  final Shader linearGradient2 = LinearGradient(
+    colors: <Color>[
+      Colors.teal,
+      Colors.tealAccent,
+    ],
+  ).createShader(
+    Rect.fromLTWH(
+      0.0,
+      0.0,
+      200.0,
+      70.0,
+    ),
+  );
+
   List<bool> tictactoe = [
     false,
     false,
@@ -62,7 +90,7 @@ class _GameScreenState extends State<GameScreen> {
           'X',
           style: TextStyle(
             fontSize: 108,
-            color: Colors.orange,
+            foreground: Paint()..shader = linearGradient1,
           ),
         ),
       );
@@ -72,7 +100,7 @@ class _GameScreenState extends State<GameScreen> {
           'O',
           style: TextStyle(
             fontSize: 108,
-            color: Colors.orange,
+            foreground: Paint()..shader = linearGradient2,
           ),
         ),
       );

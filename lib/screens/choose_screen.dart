@@ -36,6 +36,20 @@ class _ChooseScreenState extends State<ChooseScreen> {
     ),
   );
 
+  final Shader linearGradient3 = LinearGradient(
+    colors: <Color>[
+      Colors.teal,
+      Colors.tealAccent,
+    ],
+  ).createShader(
+    Rect.fromLTWH(
+      0.0,
+      0.0,
+      200.0,
+      70.0,
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,7 +96,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
                   style: TextStyle(
                     fontSize: 120,
                     fontWeight: FontWeight.bold,
-                    foreground: Paint()..shader = linearGradient2,
+                    foreground: Paint()..shader = linearGradient3,
                   ),
                 ),
               ],
