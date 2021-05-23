@@ -47,7 +47,7 @@ class _StartingScreenState extends State<StartingScreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/choose');
+                Navigator.pushNamed(context, '/game');
               },
               child: Container(
                 height: 48,
@@ -65,6 +65,19 @@ class _StartingScreenState extends State<StartingScreen> {
                       color: Colors.white,
                     ),
                   ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 180,
+            ),
+            Container(
+              child: Text(
+                'Developed by Devender Butani',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
             ),
