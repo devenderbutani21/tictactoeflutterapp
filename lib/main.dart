@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tictactoeflutterapp/screens/game_screen.dart';
-import 'package:tictactoeflutterapp/screens/choose_screen.dart';
-import 'package:tictactoeflutterapp/screens/starting_screen.dart';
+import './screens/game_screen.dart';
+import './screens/choose_screen.dart';
+import './screens/starting_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,9 +18,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
+        // Routing
         '/' : (context) => StartingScreen(),
-        '/game': (context) => GameScreen(),
         '/choose': (context) => ChooseScreen(),
+        '/game': (context) => GameScreen(ModalRoute.of(context).settings.arguments),
       },
     );
   }

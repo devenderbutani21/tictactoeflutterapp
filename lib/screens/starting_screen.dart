@@ -6,6 +6,7 @@ class StartingScreen extends StatefulWidget {
 }
 
 class _StartingScreenState extends State<StartingScreen> {
+  // Colors for text
   final Shader linearGradient = LinearGradient(
     colors: <Color>[
       Colors.orange,
@@ -45,9 +46,10 @@ class _StartingScreenState extends State<StartingScreen> {
             SizedBox(
               height: 60,
             ),
+            // Button to navigate
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/game');
+                Navigator.pushNamed(context, '/choose');
               },
               child: Container(
                 height: 48,

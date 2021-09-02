@@ -6,8 +6,10 @@ class ChooseScreen extends StatefulWidget {
 }
 
 class _ChooseScreenState extends State<ChooseScreen> {
-  bool XOrO = true;
+  // Inorder to make player choose X or O
+  bool xOrO = true;
 
+  // Colors for text
   final Shader linearGradient = LinearGradient(
     colors: <Color>[
       Colors.orange,
@@ -22,6 +24,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
     ),
   );
 
+  // Color for X
   final Shader linearGradient2 = LinearGradient(
     colors: <Color>[
       Colors.blue,
@@ -36,6 +39,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
     ),
   );
 
+  // Color for O
   final Shader linearGradient3 = LinearGradient(
     colors: <Color>[
       Colors.teal,
@@ -116,11 +120,10 @@ class _ChooseScreenState extends State<ChooseScreen> {
                   ),
                   Radio(
                     value: true,
-                    groupValue: XOrO,
+                    groupValue: xOrO,
                     onChanged: (T) {
-                      print(T);
                       setState(() {
-                        XOrO = T;
+                        xOrO = T;
                       });
                     },
                   ),
@@ -129,11 +132,10 @@ class _ChooseScreenState extends State<ChooseScreen> {
                   ),
                   Radio(
                     value: false,
-                    groupValue: XOrO,
+                    groupValue: xOrO,
                     onChanged: (T) {
-                      print(T);
                       setState(() {
-                        XOrO = T;
+                        xOrO = T;
                       });
                     },
                   ),
@@ -145,7 +147,7 @@ class _ChooseScreenState extends State<ChooseScreen> {
             ),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/game');
+                Navigator.pushNamed(context, '/game', arguments: xOrO);
               },
               child: Container(
                 height: 48,

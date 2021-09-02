@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
 
 class GameScreen extends StatefulWidget {
+  final bool xOrO;
+  GameScreen(this.xOrO);
+
   @override
   _GameScreenState createState() => _GameScreenState();
 }
 
 class _GameScreenState extends State<GameScreen> {
+  int i;
+  @override
+  void initState() {
+    if(widget.xOrO==true) {
+      i = 0;
+    } else {
+      i = 1;
+    }
+    super.initState();
+  }
+  // Color for X
   final Shader linearGradient1 = LinearGradient(
     colors: <Color>[
       Colors.blue,
@@ -20,6 +34,7 @@ class _GameScreenState extends State<GameScreen> {
     ),
   );
 
+  // Color for O
   final Shader linearGradient2 = LinearGradient(
     colors: <Color>[
       Colors.teal,
@@ -34,7 +49,8 @@ class _GameScreenState extends State<GameScreen> {
     ),
   );
 
-  List<bool> tictactoe = [
+  // Check whether it is the square is filled or not
+  List<bool> ticTacToe = [
     false,
     false,
     false,
@@ -46,6 +62,7 @@ class _GameScreenState extends State<GameScreen> {
     false,
   ];
 
+  // Board Setup is empty
   List<String> type = [
     '',
     '',
@@ -58,8 +75,11 @@ class _GameScreenState extends State<GameScreen> {
     '',
   ];
 
-  int i = 0;
 
+  // divisible to 2 then insert X and if not then O
+
+
+  // Check whether player has won or not
   checker() {
     if ((type[0] == 'o' && type[1] == 'o' && type[2] == 'o') ||
         (type[3] == 'o' && type[4] == 'o' && type[5] == 'o') ||
@@ -145,14 +165,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[0] == false) {
+                        if (ticTacToe[0] == false) {
                           if (i % 2 == 0) {
                             type[0] = 'x';
                           } else {
                             type[0] = 'o';
                           }
                         }
-                        tictactoe[0] = true;
+                        ticTacToe[0] = true;
                         setState(() {
                           i++;
                           checker();
@@ -172,14 +192,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[1] == false) {
+                        if (ticTacToe[1] == false) {
                           if (i % 2 == 0) {
                             type[1] = 'x';
                           } else {
                             type[1] = 'o';
                           }
                         }
-                        tictactoe[1] = true;
+                        ticTacToe[1] = true;
                         setState(() {
                           i++;
                           checker();
@@ -199,14 +219,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[2] == false) {
+                        if (ticTacToe[2] == false) {
                           if (i % 2 == 0) {
                             type[2] = 'x';
                           } else {
                             type[2] = 'o';
                           }
                         }
-                        tictactoe[2] = true;
+                        ticTacToe[2] = true;
                         setState(() {
                           i++;
                           checker();
@@ -234,14 +254,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[3] == false) {
+                        if (ticTacToe[3] == false) {
                           if (i % 2 == 0) {
                             type[3] = 'x';
                           } else {
                             type[3] = 'o';
                           }
                         }
-                        tictactoe[3] = true;
+                        ticTacToe[3] = true;
                         setState(() {
                           i++;
                           checker();
@@ -262,14 +282,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[4] == false) {
+                        if (ticTacToe[4] == false) {
                           if (i % 2 == 0) {
                             type[4] = 'x';
                           } else {
                             type[4] = 'o';
                           }
                         }
-                        tictactoe[4] = true;
+                        ticTacToe[4] = true;
                         setState(() {
                           i++;
                           checker();
@@ -290,14 +310,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[5] == false) {
+                        if (ticTacToe[5] == false) {
                           if (i % 2 == 0) {
                             type[5] = 'x';
                           } else {
                             type[5] = 'o';
                           }
                         }
-                        tictactoe[5] = true;
+                        ticTacToe[5] = true;
                         setState(() {
                           i++;
                           checker();
@@ -325,14 +345,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[6] == false) {
+                        if (ticTacToe[6] == false) {
                           if (i % 2 == 0) {
                             type[6] = 'x';
                           } else {
                             type[6] = 'o';
                           }
                         }
-                        tictactoe[6] = true;
+                        ticTacToe[6] = true;
                         setState(() {
                           i++;
                           checker();
@@ -353,14 +373,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[7] == false) {
+                        if (ticTacToe[7] == false) {
                           if (i % 2 == 0) {
                             type[7] = 'x';
                           } else {
                             type[7] = 'o';
                           }
                         }
-                        tictactoe[7] = true;
+                        ticTacToe[7] = true;
                         setState(() {
                           i++;
                           checker();
@@ -381,14 +401,14 @@ class _GameScreenState extends State<GameScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        if (tictactoe[8] == false) {
+                        if (ticTacToe[8] == false) {
                           if (i % 2 == 0) {
                             type[8] = 'x';
                           } else {
                             type[8] = 'o';
                           }
                         }
-                        tictactoe[8] = true;
+                        ticTacToe[8] = true;
                         setState(() {
                           i++;
                           checker();
