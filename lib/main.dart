@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import './screens/game_screen.dart';
-import './screens/choose_screen.dart';
-import './screens/starting_screen.dart';
+import './screens/route_generator.dart';
+// import './screens/game_screen.dart';
+// import './screens/choose_screen.dart';
+// import './screens/starting_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,12 +18,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.orange,
       ),
       initialRoute: '/',
-      routes: {
-        // Routing
-        '/' : (context) => StartingScreen(),
-        '/choose': (context) => ChooseScreen(),
-        '/game': (context) => GameScreen(ModalRoute.of(context).settings.arguments),
-      },
+      onGenerateRoute: RouteGenerator.generateRoute,
+      // Old Method of Routing
+      // routes: {
+      //   '/' : (context) => StartingScreen(),
+      //   '/choose': (context) => ChooseScreen(),
+      //   '/game': (context) => GameScreen(ModalRoute.of(context).settings.arguments),
+      // },
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class GameScreen extends StatefulWidget {
   final bool xOrO;
+
   GameScreen(this.xOrO);
 
   @override
@@ -10,15 +11,17 @@ class GameScreen extends StatefulWidget {
 
 class _GameScreenState extends State<GameScreen> {
   int i;
+
   @override
   void initState() {
-    if(widget.xOrO==true) {
+    if (widget.xOrO == true) {
       i = 0;
     } else {
       i = 1;
     }
     super.initState();
   }
+
   // Color for X
   final Shader linearGradient1 = LinearGradient(
     colors: <Color>[
@@ -75,9 +78,7 @@ class _GameScreenState extends State<GameScreen> {
     '',
   ];
 
-
   // divisible to 2 then insert X and if not then O
-
 
   // Check whether player has won or not
   checker() {
@@ -434,7 +435,7 @@ class _GameScreenState extends State<GameScreen> {
                 ),
                 checker() == 0
                     ? Container(
-                        height: 30,
+                        height: 32,
                       )
                     : (checker() == 1
                         ? Container(
