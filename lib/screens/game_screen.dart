@@ -52,6 +52,13 @@ class _GameScreenState extends State<GameScreen> {
     ),
   );
 
+  LinearGradient gradientGrid = LinearGradient(
+    colors: <Color>[
+      Colors.orange,
+      Colors.orangeAccent,
+    ],
+  );
+
   // Check whether it is the square is filled or not
   List<bool> ticTacToe = [
     false,
@@ -186,7 +193,7 @@ class _GameScreenState extends State<GameScreen> {
                             color: Colors.black,
                             border: Border.all(
                               width: 1,
-                              color: Colors.white,
+                              color: Colors.orange,
                             ),
                           ),
                           child: xoDisplay(type[0])),
@@ -213,7 +220,7 @@ class _GameScreenState extends State<GameScreen> {
                             color: Colors.black,
                             border: Border.all(
                               width: 1,
-                              color: Colors.white,
+                              color: Colors.orange,
                             ),
                           ),
                           child: xoDisplay(type[1])),
@@ -240,7 +247,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[2]),
@@ -275,7 +282,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[3]),
@@ -303,7 +310,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[4]),
@@ -331,7 +338,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[5]),
@@ -366,7 +373,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[6]),
@@ -394,7 +401,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[7]),
@@ -422,7 +429,7 @@ class _GameScreenState extends State<GameScreen> {
                           color: Colors.black,
                           border: Border.all(
                             width: 1,
-                            color: Colors.white,
+                            color: Colors.orange,
                           ),
                         ),
                         child: xoDisplay(type[8]),
@@ -442,7 +449,7 @@ class _GameScreenState extends State<GameScreen> {
                             child: Text(
                               "O Won this round",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.orange,
                                 fontSize: 32,
                               ),
                             ),
@@ -451,7 +458,7 @@ class _GameScreenState extends State<GameScreen> {
                             child: Text(
                               "X Won this round",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.orange,
                                 fontSize: 32,
                               ),
                             ),
